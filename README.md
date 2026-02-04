@@ -16,6 +16,10 @@ The project combines **Computer Vision** and **Natural Language Processing** to 
 
 ---
 
+## Demo
+
+![Image Caption Generator Demo](screenshots/demo.png)
+
 ## 🧠 How It Works (Workflow)
 
 1. User uploads an image through the web interface
