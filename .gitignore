@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Datasets
+data/
+*.zip
+
+# Uploads (optional – keep empty folder with .gitkeep)
+uploads/*
+!uploads/.gitkeep

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Image Caption Generator</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Image Caption Generator</h1>
+      <p>AI-powered image understanding using deep learning</p>
+    </header>
+
+    <!-- Upload Card -->
+    <section class="upload-card">
+      <form method="POST" enctype="multipart/form-data">
+        <label class="upload-box">
+          <input type="file" name="image" hidden required onchange="previewImage(event)">
+          <span>Click to upload image</span>
+        </label>
+
+        <img id="preview" class="preview hidden">
+
+        <button type="submit" class="generate-btn">
+          Generate Caption
+        </button>
+      </form>
+    </section>
+
+    <!-- Result -->
+    {% if caption %}
+    <section class="result-card">
+      <img src="{{ image_path }}" class="result-image">
+      <div class="caption-box">
+        <h3>Generated Caption</h3>
+        <p>{{ caption }}</p>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Built with CNN-LSTM | Flask | TensorFlow</p>
+    </footer>
+
+  </div>
+</body>
+</html>
+
